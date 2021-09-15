@@ -1,0 +1,26 @@
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+<div class="container">
+
+  <label>UserName</label>
+  <input type="text" class="form-control" [(ngModel)]="username">
+  <label>Password</label>
+  <input type="text" class="form-control my-2" [(ngModel)]="password">
+  
+
+  <button class="btn btn-primary my-5 mx-5" (click)="ontoggledetails()"> Add Details</button>
+
+  <!-- <p *ngIf="!secretshow">
+    {{this.username}}
+  </p> -->
+  <div *ngFor="let items of log">
+    {{this.username}}
+    {{this.password}}
+
+  </div>
+  
+</div>
+
+
+<router-outlet></router-outlet>
